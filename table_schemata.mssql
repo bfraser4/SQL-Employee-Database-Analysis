@@ -1,0 +1,70 @@
+drop table departments
+drop table dept_emp
+drop table dept_manager
+drop table employees
+drop table salaries
+drop table titles
+
+--Create Departments table
+create TABLE Departments(
+	ID Serial Primary Key,
+  dept_no VARCHAR NOT NULL, 
+	dept_name VARCHAR NOT NULL)
+	
+--View Departments table
+SELECT *
+FROM Departments
+	
+--Create dept_emp table
+create TABLE dept_emp(
+	ID Serial Primary Key,
+  emp_no INTEGER, 
+	dept_no INTEGER)
+	
+--View dept_emp table
+SELECT *
+FROM dept_emp
+
+--Create dept_manager table
+create TABLE dept_manager(
+	ID Serial Primary Key,
+  dept_no VARCHAR (30), 
+	emp_no INTEGER)
+
+--View dept_manager table
+SELECT *
+FROM dept_manager
+	
+--Create Employees table
+create TABLE Employees(
+  emp_no INTEGER NOT NULL PRIMARY KEY, 
+	emp_title_id VARCHAR NOT NULL,
+	birth_date VARCHAR NOT NULL,
+	first_name VARCHAR NOT NULL, 
+	last_name VARCHAR NOT NULL,
+	sex VARCHAR NOT NULL, 
+	hire_date DATE NOT NULL,
+	FOREIGN KEY (emp_title_id) REFERENCES titles(title_id))
+
+--View Employees table
+SELECT *
+FROM Employees
+	
+--Create Salaries table
+create TABLE Salaries(
+	ID Serial Primary Key,
+  emp_no INTEGER, 
+	salary INTEGER)
+
+--View Salaries table
+SELECT *
+FROM Salaries
+	
+--Create Titles table
+create TABLE Titles(
+  title_id VARCHAR NOT NULL PRIMARY KEY, 
+	title VARCHAR (30))
+	
+--View Titles table
+SELECT *
+FROM Titles
