@@ -7,8 +7,7 @@ drop table titles
 
 --Create Departments table
 create TABLE Departments(
-	ID Serial Primary Key,
-  dept_no VARCHAR NOT NULL, 
+  dept_no VARCHAR NOT NULL PRIMARY KEY, 
 	dept_name VARCHAR NOT NULL)
 	
 --View Departments table
@@ -17,9 +16,10 @@ FROM Departments
 	
 --Create dept_emp table
 create TABLE dept_emp(
-	ID Serial Primary Key,
-  emp_no INTEGER, 
-	dept_no INTEGER)
+  emp_no INTEGER NOT NULl, 
+	dept_no VARCHAR NOT NULL,
+	FOREIGN KEY (emp_no) REFERENCES Employees(emp_no),
+	FOREIGN KEY (dept_no) REFERENCES Departments(dept_no))
 	
 --View dept_emp table
 SELECT *
@@ -27,9 +27,8 @@ FROM dept_emp
 
 --Create dept_manager table
 create TABLE dept_manager(
-	ID Serial Primary Key,
-  dept_no VARCHAR (30), 
-	emp_no INTEGER)
+  dept_no VARCHAR NOT NULL, 
+	emp_no INTEGER NOT NULL PRIMARY KEY)
 
 --View dept_manager table
 SELECT *
@@ -52,9 +51,9 @@ FROM Employees
 	
 --Create Salaries table
 create TABLE Salaries(
-	ID Serial Primary Key,
-  emp_no INTEGER, 
-	salary INTEGER)
+  emp_no INTEGER NOT NULL, 
+	salary INTEGER NOT NULL,
+	FOREIGN KEY (emp_no) REFERENCES Employees(emp_no))
 
 --View Salaries table
 SELECT *
@@ -63,7 +62,7 @@ FROM Salaries
 --Create Titles table
 create TABLE Titles(
   title_id VARCHAR NOT NULL PRIMARY KEY, 
-	title VARCHAR (30))
+	title VARCHAR NOT NULL)
 	
 --View Titles table
 SELECT *
