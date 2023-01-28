@@ -24,6 +24,8 @@ Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool li
 
 Once you have a complete database, perform these steps:
 
+![carbon (1)](https://user-images.githubusercontent.com/107604123/215287316-7c33a5df-71c5-416f-80c9-d79678d19a19.png)
+
 1. List the following details of each employee: employee number, last name, first name, sex, and salary.
 
 2. List first name, last name, and hire date for employees who were hired in 1986.
