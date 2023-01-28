@@ -6,22 +6,18 @@ It’s a beautiful spring day, and it’s been two weeks since you were hired as
 
 In this assignment, you will design the tables to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data. In other words, you will perform **data modeling**, **data engineering**, and **data analysis**. 
 
-#### Data Modeling
+## Data Modeling
 
 Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool like [http://www.quickdatabasediagrams.com](http://www.quickdatabasediagrams.com).
 
-#### Data Engineering
+## Data Engineering
 
 * Use the provided information to create a table schema for each of the six CSV files. Remember to specify data types, primary keys, foreign keys, and other constraints.
-
-  * For the primary keys, verify that the column is unique. Otherwise, create a [composite key](https://en.wikipedia.org/wiki/Compound_key), which takes two primary keys to uniquely identify a row.
-
-  * Be sure to create tables in the correct order to handle foreign keys.
 
 ![carbon (10)](https://user-images.githubusercontent.com/107604123/215287552-5d2118a7-d92b-4b7e-910f-6456f709e1b3.png)
 
 
-#### Data Analysis
+## Data Analysis
 
 Once you have a complete database, perform these steps:
 
