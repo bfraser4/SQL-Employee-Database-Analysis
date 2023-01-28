@@ -18,7 +18,8 @@ Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool li
 
   * Be sure to create tables in the correct order to handle foreign keys.
 
-* Import each CSV file into the corresponding SQL table. 
+![carbon (10)](https://user-images.githubusercontent.com/107604123/215287552-5d2118a7-d92b-4b7e-910f-6456f709e1b3.png)
+
 
 #### Data Analysis
 
